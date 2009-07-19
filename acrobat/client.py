@@ -271,7 +271,7 @@ class AcrobatClient(object):
 				'Content-Type: text/xml\r\n\r\n'+\
 				request.encode('utf-8')+\
 				'\r\n--'+boundary+'\r\n'+\
-				'Content-disposition: form-data; name="file"; filename="%s"\r\n'%name+\
+				'Content-disposition: form-data; name="file"; filename="%s"\r\n'%name.encode('utf-8')+\
 				'Content-Type: application/octet-stream\r\n'+\
 				'Content-Transfer-Encoding: binary\r\n\r\n'+\
 				content+\
